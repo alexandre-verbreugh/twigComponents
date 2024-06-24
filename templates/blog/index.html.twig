@@ -3,7 +3,19 @@
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
-    {{ component('alert', { type:'success', message: 'Super ça fonctionne' }) }}
-    {{ component('alert', { type: 'danger', message: 'Houlala le gros problème' }) }}
-    {{ component('feature_products') }}
+    <div class="text-center m-5">
+        <h1>Twig components</h1>
+    </div>
+    <div class="col-6 mx-auto">    
+        {{ component('alert', { type: 'success', message: 'Super ça fonctionne' }) }}
+    </div>
+    <div class="col-6 mx-auto">    
+        {{ component('alert', { type: 'danger', message: 'Houlala le gros problème' }) }}
+    </div>
+    <div class="col-6 mx-auto">
+        {{ component('feature_products') }}
+    </div>
+    <div class="col-6 mx-auto text-center mt-3">
+	    <a href="/search" class="btn btn-success">Formulaire de recherche</a>
+    </div>
 {% endblock %}

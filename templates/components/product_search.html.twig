@@ -1,0 +1,11 @@
+<div {{ attributes }}>
+    <div class="col-6 mb-5 mx-auto form-label">
+        <input class="form-control" type="search" data-model="query">
+    </div>
+        {% for product in this.products %}
+            <div class="card col-6 m-3 mx-auto">
+                <h1>{{ product.title }}</h1>
+                <p>{{ product.content }}</p>
+            </div>
+        {% endfor %}
+</div>

@@ -5,7 +5,7 @@ namespace App\Repository;
 use App\Entity\Blog;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-
+use Doctrine\ORM\QueryBuilder;
 /**
  * @extends ServiceEntityRepository<Blog>
  */
@@ -16,6 +16,18 @@ class BlogRepository extends ServiceEntityRepository
         parent::__construct($registry, Blog::class);
     }
 
+    /**
+     * @param string $query
+     * @return Blog[]
+     */
+    public function search(string $query): array
+    {
+        return $this->createQueryBuilder('b')
+            ->where('b.title LIKE :query')
+            ->setParameter('query', '%' . $query . '%')
+            ->getQuery()
+            ->getResult();
+    }
     //    /**
     //     * @return Blog[] Returns an array of Blog objects
     //     */
