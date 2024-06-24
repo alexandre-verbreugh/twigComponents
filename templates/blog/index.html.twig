@@ -3,9 +3,6 @@
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
-    {{ component('Alert', { message: 'Super ça fonctionne'}) }}
-    {{ component('Alert', { type: 'danger', message: 'Houlala le gros problème'}) }}
-
-
+    {{ component('alert', { type:'success', message: 'Super ça fonctionne' }) }}
+    {{ component('alert', { type: 'danger', message: 'Houlala le gros problème' }) }}
 {% endblock %}
-
