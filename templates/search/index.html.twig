@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SearchController!{% endblock %}
+
+{% block body %}
+<div class="text-center mt-5">
+    <h1>Formulaire de recherche</h1>
+</div>
+<div class="text-center">
+        {{ component('product_search') }}
+</div>
+<div class="text-center">
+    <a href="/" class="btn btn-success">Retour à la page d'accueil</a>
+</div>
+{% endblock %}
