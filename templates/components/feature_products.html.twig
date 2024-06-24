@@ -1,0 +1,12 @@
+<div>
+    <h3>Featured Products</h3>
+
+    {% for product in this.products %}
+        <div class="card">
+            {{product.title}}
+        </div>
+        <div class="card">
+            {{product.content}}
+        </div>    
+    {% endfor %}
+</div>
