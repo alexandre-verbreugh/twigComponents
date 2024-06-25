@@ -22,6 +22,10 @@ class BlogRepository extends ServiceEntityRepository
      */
     public function search(string $query): array
     {
+        if (empty($query)) {
+            return [];
+        }
+        
         return $this->createQueryBuilder('b')
             ->where('b.title LIKE :query')
             ->setParameter('query', '%' . $query . '%')
