@@ -6,6 +6,9 @@
     <div class="text-center m-5">
         <h1>Twig components</h1>
     </div>
+    <div class="text-center m-5">
+        <h2>Appel des alerte via Twig/Components</h2>
+    </div>
     <div class="col-6 mx-auto">    
         {{ component('alert', { type: 'success', message: 'Super ça fonctionne' }) }}
     </div>
@@ -15,7 +18,12 @@
     <div class="col-6 mx-auto">
         {{ component('feature_products') }}
     </div>
-    <div class="col-6 mx-auto text-center mt-3">
-	    <a href="/search" class="btn btn-success">Formulaire de recherche</a>
+    <div class="row">
+        <div class="col-6 mt-3 mb-5 text-end">
+            <a href="/search" class="btn btn-success">Formulaire de recherche</a>
+        </div>
+        <div class="col-6 mt-3 mb-5">
+            <a href="/stream" class="btn btn-primary">Formulaire stream</a>
+        </div>
     </div>
 {% endblock %}

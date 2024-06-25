@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello StreamController!{% endblock %}
+
+{% block body %}
+    <div class="text-center m-5">
+        <h1>Formulaire Stream</h1>
+    </div>
+    <div data-controller="hello" class="col-12 text-center">
+        <input type="text" data-action="input->hello#update">
+        <p data-hello-target="output"></p>
+    </div>
+    <div class="col-6 mx-auto text-center mt-3">
+	    <a href="/" class="btn btn-primary">Accueil</a>
+    </div>
+{% endblock %}

@@ -1,12 +1,10 @@
 <div>
-    <h3>Featured Products</h3>
+    <h3 class="text-center">Article de la base de données</h3>
 
     {% for product in this.products %}
-        <div class="card">
-            {{product.title}}
-        </div>
-        <div class="card">
-            {{product.content}}
+        <div class="card m-3">
+            <h3 class="text-center">{{product.title}}</h3>
+            <p>{{product.content}}</p>
         </div>    
     {% endfor %}
 </div>
